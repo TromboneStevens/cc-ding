@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "CC Ding - Golden Cookie Alert",
+  "version": "1.0.0",
+  "description": "Plays a sound effect when a golden cookie appears in Cookie Clicker.",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "permissions": ["storage"],
+  "web_accessible_resources": [
+    {
+      "resources": ["ding.wav"],
+      "matches": ["https://orteil.dashnet.org/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://orteil.dashnet.org/cookieclicker/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CC Ding settings",
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cc-ding@trombonestevens.github.io",
+      "strict_min_version": "109.0"
+    }
+  }
+}
