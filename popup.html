@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CC Ding</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        width: 240px;
+        margin: 0;
+        padding: 14px 16px;
+        font: 14px/1.4 system-ui, sans-serif;
+        background: #2b1d10;
+        color: #f4e3c6;
+      }
+      h1 {
+        font-size: 15px;
+        margin: 0 0 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+      }
+      label {
+        user-select: none;
+      }
+      input[type="range"] {
+        width: 110px;
+      }
+      button {
+        width: 100%;
+        margin-top: 8px;
+        padding: 8px;
+        border: 0;
+        border-radius: 6px;
+        background: #d9a441;
+        color: #2b1d10;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #e7b858;
+      }
+      .hint {
+        margin-top: 10px;
+        font-size: 11px;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🍪 CC Ding</h1>
+
+    <div class="row">
+      <label for="enabled">Play sound</label>
+      <input type="checkbox" id="enabled" />
+    </div>
+
+    <div class="row">
+      <label for="volume">Volume</label>
+      <input type="range" id="volume" min="0" max="1" step="0.05" />
+    </div>
+
+    <button id="test">Test sound</button>
+
+    <p class="hint">
+      Dings when a golden cookie appears at
+      orteil.dashnet.org/cookieclicker
+    </p>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
